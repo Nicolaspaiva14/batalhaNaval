@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🛥️Batalha Naval</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rajdhani&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <h1>🛥Batalha Naval</h1>
+  <p>Escolha o nível de dificuldade</p>
+
+
+  <audio id="meuAudio" autoplay loop>
+    <source src="./som/No tabuleiro do mar, começa o jogão,.mp3" type="audio/mp3">
+</audio>
+    <audio id="hit-sound" src="./som/revovler-sound-328431.mp3"></audio>
+    <audio id="miss-sound" src="./som/water-splash-199583.mp3"></audio>
+
+
+
+  <select id="difficulty">
+    <option value="easy">Fácil</option>
+    <option value="medium">Médio</option>
+    <option value="hard">Difícil</option>
+  </select>
+
+  <div class="board-wrapper">
+    <div id="row-labels"></div>
+    <div id="col-labels"></div>
+    <div id="enemy-board"></div>
+  </div>
+  
+  <div id="status"></div>
+  <p id="remaining"></p>
+  <button id="restart-btn"> Reiniciar</button>
+
+  <!-- Código de leitura em Libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+   
+
+  <script src="script.js"></script>
+</body>
+</html>
